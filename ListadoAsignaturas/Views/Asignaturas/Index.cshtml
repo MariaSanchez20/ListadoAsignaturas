@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div class="container">
+    <h2>Listado de Asignaturas</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre de la Asignatura</th>
+                <th>Profesor</th>
+                <th>Créditos</th>
+                <th>Cuatrimestre</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var asignatura in Model)
+            {
+                <tr>
+                    <td>@asignatura.NombreAsignatura</td>
+                    <td>@asignatura.NombreProfesor</td>
+                    <td>@asignatura.Creditos</td>
+                    <td>@asignatura.Cuatrimestre</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
